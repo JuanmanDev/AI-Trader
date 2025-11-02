@@ -181,6 +181,8 @@ class AlpacaTradingConnector:
             raise ValueError("Alpaca API credentials not found. Set ALPACA_API_KEY and ALPACA_SECRET_KEY")
         
         # Initialize trading client
+        # Note: For paper trading, Alpaca SDK uses https://paper-api.alpaca.markets automatically
+        # url_override is only needed for live trading or custom endpoints
         self.trading_client = TradingClient(
             self.api_key,
             self.secret_key,

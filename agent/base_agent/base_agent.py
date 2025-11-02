@@ -76,17 +76,20 @@ class BaseAgent:
         
         Args:
             signature: Agent signature/name
-            basemodel: Base model name
+            basemodel: Base model name (supports provider prefixes: openai/, ollama/, anthropic/)
             stock_symbols: List of stock symbols, defaults to NASDAQ 100
             mcp_config: MCP tool configuration, including port and URL information
             log_path: Log path, defaults to ./data/agent_data
             max_steps: Maximum reasoning steps
             max_retries: Maximum retry attempts
             base_delay: Base delay time for retries
-            openai_base_url: OpenAI API base URL
-            openai_api_key: OpenAI API key
+            openai_base_url: API base URL (works for OpenAI and compatible APIs)
+            openai_api_key: API key (works for OpenAI and compatible APIs)
             initial_cash: Initial cash amount
             init_date: Initialization date
+            
+        Note: openai_base_url and openai_api_key are named for backward compatibility
+              but work with any LLM provider through the LLM factory.
         """
         self.signature = signature
         self.basemodel = basemodel
