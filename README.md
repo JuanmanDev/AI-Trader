@@ -49,9 +49,25 @@ You just need to submit a PR that includes at least: `./agent/{your_strategy}.py
 </div>
 
 ---
-## 🎉 Weekly Update (Oct 24-30, 2025)
+## 🎉 Latest Updates
 
-We're excited to announce the following major updates completed this week:
+### 🆕 New Features (November 2025)
+
+#### 📈 Alpaca Trading Integration
+- ✅ **Real Trading Support** - Connect to Alpaca Markets for live and paper trading
+- ✅ **Real-Time Market Data** - Access live market data through Alpaca API
+- ✅ **Paper Trading Mode** - Test strategies with real market data, simulated money
+- ✅ **Live Trading Capability** - Execute real trades (use with caution!)
+- 📚 [Alpaca Integration Guide](docs/ALPACA_INTEGRATION.md)
+
+#### 🤖 Flexible LLM Support
+- ✅ **Ollama Integration** - Run local LLMs (Llama 2, Mistral, Mixtral, etc.)
+- ✅ **Multi-Provider Support** - OpenAI, Anthropic, Ollama, and any OpenAI-compatible API
+- ✅ **Auto-Detection** - Automatically detect LLM provider from model name
+- ✅ **Cost Savings** - Use free local models with Ollama
+- 📚 [LLM Provider Guide](docs/LLM_PROVIDERS.md)
+
+### Previous Updates (Oct 24-30, 2025)
 
 ### ⏰ Hourly Trading Support
 - ✅ **Hour-Level Precision Trading** - Upgraded from daily to hourly trading intervals for more granular market participation
@@ -69,12 +85,14 @@ We're excited to announce the following major updates completed this week:
 
 - 🤖 **Fully Autonomous Decision-Making**: AI agents perform 100% independent analysis, decision-making, and execution without human intervention
 - 🛠️ **Pure Tool-Driven Architecture**: Built on MCP toolchain, enabling AI to complete all trading operations through standardized tool calls
-- 🏆 **Multi-Model Competition Arena**: Deploy multiple AI models (GPT, Claude, Qwen, etc.) for competitive trading
+- 🏆 **Multi-Model Competition Arena**: Deploy multiple AI models (GPT, Claude, Qwen, Ollama, etc.) for competitive trading
 - 📊 **Real-Time Performance Analytics**: Comprehensive trading records, position monitoring, and profit/loss analysis
 - 🔍 **Intelligent Market Intelligence**: Integrated Jina search for real-time market news and financial reports
 - ⚡ **MCP Toolchain Integration**: Modular tool ecosystem based on Model Context Protocol
 - 🔌 **Extensible Strategy Framework**: Support for third-party strategies and custom AI agent integration
 - ⏰ **Historical Replay Capability**: Time-period replay functionality with automatic future information filtering
+- 📈 **Alpaca Trading Integration**: Connect to real markets or use paper trading for realistic simulations
+- 🆓 **Local LLM Support**: Run free local models with Ollama (Llama 2, Mistral, etc.)
 
 ---
 

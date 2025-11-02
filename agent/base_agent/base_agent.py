@@ -22,6 +22,7 @@ sys.path.insert(0, project_root)
 
 from tools.general_tools import extract_conversation, extract_tool_messages, get_config_value, write_config_value
 from tools.price_tools import add_no_trade_record
+from tools.llm_factory import LLMFactory, create_llm_from_config
 from prompts.agent_prompt import get_agent_system_prompt, STOP_SIGNAL
 
 # Load environment variables
@@ -147,12 +148,6 @@ class BaseAgent:
         """Initialize MCP client and AI model"""
         print(f"🚀 Initializing agent: {self.signature}")
         
-        # Validate OpenAI configuration
-        if not self.openai_api_key:
-            raise ValueError("❌ OpenAI API key not set. Please configure OPENAI_API_KEY in environment or config file.")
-        if not self.openai_base_url:
-            print("⚠️  OpenAI base URL not set, using default")
-        
         try:
             # Create MCP client
             self.client = MultiServerMCPClient(self.mcp_config)
@@ -172,9 +167,9 @@ class BaseAgent:
             )
         
         try:
-            # Create AI model
-            self.model = ChatOpenAI(
-                model=self.basemodel,
+            # Create AI model using LLM factory for flexibility
+            self.model = LLMFactory.create_llm(
+                model_name=self.basemodel,
                 base_url=self.openai_base_url,
                 api_key=self.openai_api_key,
                 max_retries=3,
