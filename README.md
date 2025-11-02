@@ -235,10 +235,17 @@ AI-Trader Bench/
 
 ## 🚀 Quick Start
 
+### 📚 New Features Documentation
+
+- 📈 **[Alpaca Trading Integration Guide](docs/ALPACA_INTEGRATION.md)** - Connect to real markets
+- 🤖 **[LLM Provider Guide](docs/LLM_PROVIDERS.md)** - Use OpenAI, Ollama, or other LLMs
+- ⚡ **[Quick Start for New Features](docs/QUICKSTART_NEW_FEATURES.md)** - Get started quickly
+
 ### 📋 Prerequisites
 
 - **Python 3.10+** 
-- **API Keys**: OpenAI, Alpha Vantage, Jina AI
+- **API Keys**: OpenAI (or Ollama for free local LLMs), Alpha Vantage, Jina AI
+- **Optional**: Alpaca API keys for real/paper trading
 
 ### ⚡ One-Click Installation
 
@@ -268,6 +275,14 @@ OPENAI_API_KEY=your_openai_key
 ALPHAADVANTAGE_API_KEY=your_alpha_vantage_key
 JINA_API_KEY=your_jina_api_key
 
+# 📈 Alpaca Trading (Optional - for real/paper trading)
+ALPACA_API_KEY=your_alpaca_key
+ALPACA_SECRET_KEY=your_alpaca_secret
+ALPACA_BASE_URL=https://paper-api.alpaca.markets
+
+# 🦙 Ollama (Optional - for local LLMs)
+OLLAMA_BASE_URL=http://localhost:11434
+
 # ⚙️ System Configuration
 RUNTIME_ENV_PATH=./runtime_env.json # Recommended to use absolute path
 
@@ -276,6 +291,7 @@ MATH_HTTP_PORT=8000
 SEARCH_HTTP_PORT=8001
 TRADE_HTTP_PORT=8002
 GETPRICE_HTTP_PORT=8003
+ALPACA_TRADE_HTTP_PORT=8004  # Optional for Alpaca trading
 # 🧠 AI Agent Configuration
 AGENT_MAX_STEP=30             # Maximum reasoning steps
 ```
