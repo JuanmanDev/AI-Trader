@@ -2,6 +2,16 @@
 
 # 🚀 AI-Trader: Can AI Beat the Market?
 
+<br>
+
+## 💖 Support this project
+If you found this project helpful, please consider supporting it!
+
+[![GitHub Sponsor](https://img.shields.io/badge/Sponsor-JuanmanDev-ea4aaa?style=for-the-badge&logo=github)](https://github.com/sponsors/JuanmanDev) [![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/juanmandev) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/juanmandev)
+
+<br>
+
+
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/HKUDS/AI-Trader?style=social)](https://github.com/HKUDS/AI-Trader)
@@ -49,9 +59,25 @@ You just need to submit a PR that includes at least: `./agent/{your_strategy}.py
 </div>
 
 ---
-## 🎉 Weekly Update (Oct 24-30, 2025)
+## 🎉 Latest Updates
 
-We're excited to announce the following major updates completed this week:
+### 🆕 New Features (November 2025)
+
+#### 📈 Alpaca Trading Integration
+- ✅ **Real Trading Support** - Connect to Alpaca Markets for live and paper trading
+- ✅ **Real-Time Market Data** - Access live market data through Alpaca API
+- ✅ **Paper Trading Mode** - Test strategies with real market data, simulated money
+- ✅ **Live Trading Capability** - Execute real trades (use with caution!)
+- 📚 [Alpaca Integration Guide](docs/ALPACA_INTEGRATION.md)
+
+#### 🤖 Flexible LLM Support
+- ✅ **Ollama Integration** - Run local LLMs (Llama 2, Mistral, Mixtral, etc.)
+- ✅ **Multi-Provider Support** - OpenAI, Anthropic, Ollama, and any OpenAI-compatible API
+- ✅ **Auto-Detection** - Automatically detect LLM provider from model name
+- ✅ **Cost Savings** - Use free local models with Ollama
+- 📚 [LLM Provider Guide](docs/LLM_PROVIDERS.md)
+
+### Previous Updates (Oct 24-30, 2025)
 
 ### ⏰ Hourly Trading Support
 - ✅ **Hour-Level Precision Trading** - Upgraded from daily to hourly trading intervals for more granular market participation
@@ -69,12 +95,14 @@ We're excited to announce the following major updates completed this week:
 
 - 🤖 **Fully Autonomous Decision-Making**: AI agents perform 100% independent analysis, decision-making, and execution without human intervention
 - 🛠️ **Pure Tool-Driven Architecture**: Built on MCP toolchain, enabling AI to complete all trading operations through standardized tool calls
-- 🏆 **Multi-Model Competition Arena**: Deploy multiple AI models (GPT, Claude, Qwen, etc.) for competitive trading
+- 🏆 **Multi-Model Competition Arena**: Deploy multiple AI models (GPT, Claude, Qwen, Ollama, etc.) for competitive trading
 - 📊 **Real-Time Performance Analytics**: Comprehensive trading records, position monitoring, and profit/loss analysis
 - 🔍 **Intelligent Market Intelligence**: Integrated Jina search for real-time market news and financial reports
 - ⚡ **MCP Toolchain Integration**: Modular tool ecosystem based on Model Context Protocol
 - 🔌 **Extensible Strategy Framework**: Support for third-party strategies and custom AI agent integration
 - ⏰ **Historical Replay Capability**: Time-period replay functionality with automatic future information filtering
+- 📈 **Alpaca Trading Integration**: Connect to real markets or use paper trading for realistic simulations
+- 🆓 **Local LLM Support**: Run free local models with Ollama (Llama 2, Mistral, etc.)
 
 ---
 
@@ -217,10 +245,17 @@ AI-Trader Bench/
 
 ## 🚀 Quick Start
 
+### 📚 New Features Documentation
+
+- 📈 **[Alpaca Trading Integration Guide](docs/ALPACA_INTEGRATION.md)** - Connect to real markets
+- 🤖 **[LLM Provider Guide](docs/LLM_PROVIDERS.md)** - Use OpenAI, Ollama, or other LLMs
+- ⚡ **[Quick Start for New Features](docs/QUICKSTART_NEW_FEATURES.md)** - Get started quickly
+
 ### 📋 Prerequisites
 
 - **Python 3.10+** 
-- **API Keys**: OpenAI, Alpha Vantage, Jina AI
+- **API Keys**: OpenAI (or Ollama for free local LLMs), Alpha Vantage, Jina AI
+- **Optional**: Alpaca API keys for real/paper trading
 
 ### ⚡ One-Click Installation
 
@@ -250,6 +285,14 @@ OPENAI_API_KEY=your_openai_key
 ALPHAADVANTAGE_API_KEY=your_alpha_vantage_key
 JINA_API_KEY=your_jina_api_key
 
+# 📈 Alpaca Trading (Optional - for real/paper trading)
+ALPACA_API_KEY=your_alpaca_key
+ALPACA_SECRET_KEY=your_alpaca_secret
+ALPACA_BASE_URL=https://paper-api.alpaca.markets
+
+# 🦙 Ollama (Optional - for local LLMs)
+OLLAMA_BASE_URL=http://localhost:11434
+
 # ⚙️ System Configuration
 RUNTIME_ENV_PATH=./runtime_env.json # Recommended to use absolute path
 
@@ -258,6 +301,7 @@ MATH_HTTP_PORT=8000
 SEARCH_HTTP_PORT=8001
 TRADE_HTTP_PORT=8002
 GETPRICE_HTTP_PORT=8003
+ALPACA_TRADE_HTTP_PORT=8004  # Optional for Alpaca trading
 # 🧠 AI Agent Configuration
 AGENT_MAX_STEP=30             # Maximum reasoning steps
 ```
@@ -600,3 +644,13 @@ The materials provided by the AI-Trader project are for research purposes only a
   <em> ❤️ Thanks for visiting ✨ AI-Trader!</em><br><br>
   <img src="https://visitor-badge.laobi.icu/badge?page_id=HKUDS.AI-Trader&style=for-the-badge&color=00d4ff" alt="Views">
 </p>
+
+
+<br>
+
+## 💖 Support this project
+If you found this project helpful, please consider supporting it!
+
+[![GitHub Sponsor](https://img.shields.io/badge/Sponsor-JuanmanDev-ea4aaa?style=for-the-badge&logo=github)](https://github.com/sponsors/JuanmanDev) [![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/juanmandev) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/juanmandev)
+
+<br>

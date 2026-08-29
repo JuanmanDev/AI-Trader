@@ -1,0 +1,39 @@
+{
+  "agent_type": "BaseAgent",
+  "date_range": {
+    "init_date": "2025-10-01",
+    "end_date": "2025-10-21"
+  },
+  "models": [
+    {
+      "name": "gpt-4-trader",
+      "basemodel": "openai/gpt-4",
+      "signature": "gpt-4-example",
+      "enabled": true,
+      "comment": "Example: Using GPT-4 from OpenAI"
+    },
+    {
+      "name": "llama2-local",
+      "basemodel": "ollama/llama2",
+      "signature": "llama2-local",
+      "enabled": false,
+      "comment": "Example: Using Llama 2 via Ollama (requires Ollama running locally)"
+    },
+    {
+      "name": "mistral-local",
+      "basemodel": "ollama/mistral",
+      "signature": "mistral-local",
+      "enabled": false,
+      "comment": "Example: Using Mistral via Ollama"
+    }
+  ],
+  "agent_config": {
+    "max_steps": 30,
+    "max_retries": 3,
+    "base_delay": 1.0,
+    "initial_cash": 10000.0
+  },
+  "log_config": {
+    "log_path": "./data/agent_data"
+  }
+}
